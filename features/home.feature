@@ -1,8 +1,7 @@
-# Feature: I am on saucedemo.com
+Feature: I am on saucedemo.com
 
-# Scenario: Testing drop down list
+Scenario: Testing hamburger button
 
-# Given I am on home page
-# When I click on drop down list 'PRICE'
-# And I click on "NAME (A - Z)"
-# Then I shoud see sorted products
+Given I am loged in on home page
+When I click on hamburger button on the top left side
+Then I shoud see list of comands
