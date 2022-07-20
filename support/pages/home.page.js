@@ -1,6 +1,5 @@
 const Page = require('./base.page');
 const assert = require('assert');
-String: text = "Pass or fail. The world relies on your code.";
 
 class HomePage extends Page {
 
@@ -20,11 +19,11 @@ class HomePage extends Page {
         return $('#reset_sidebar_link');
     }
     get SauceLabTextDispayed() {
-        return $('.title is-1');
+        return $('.title.is-1');
     }
 
     checkIfTextIsDisplayed() {
-        assert.strictEqual(this.SauceLabTextDispayed.isDisplayed(), false);
+        assert.strictEqual(this.SauceLabTextDispayed.getText(), 'Pass or fail. The world relies on your code.');
     }
 
     checkIfYouAreLogedIn() {
@@ -32,16 +31,19 @@ class HomePage extends Page {
     }
 
     clickOnHamburgerButton() {
-        this.btnHamburger.click();
+        this.click(this.btnHamburger);
     }
+
     clickOnAllItemButton() {
-        this.btnAllItems.click();
+        this.click(this.btnAllItems);
     }
+
     clickOnAboutButton() {
-        this.btnAbout.click();
+        this.click(this.btnAbout);
     }
+
     clickOnLogout() {
-        this.btnLogout.click();
+        this.click(this.btnLogout);
     }
 
     checkIfHamburgerMenuIsDispayed() {

@@ -1,4 +1,4 @@
-Feature: I am on saucedemo.com
+Feature: Testing if i can place the order
 
 Scenario: Testing purchasing with empty cart
 
