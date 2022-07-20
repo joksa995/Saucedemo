@@ -8,13 +8,9 @@ Given(/^I am loged in on home page$/, function() {
     LoginPage.login(usersData.username, usersData.password);
 });
 When(/^I click on hamburger button on the top left side$/, function() {
-    browser.pause(2000);
     HomePage.clickOnHamburgerButton();
-    browser.pause(2000);
     HomePage.clickOnAboutButton();
     HomePage.checkIfTextIsDisplayed();
     // HomePage.checkIfHamburgerMenuIsDispayed();
 });
-Then(/^I shoud see list of comands$/, function() {
-    browser.pause(2000);
-});
+Then(/^I shoud see list of comands$/, function() {});

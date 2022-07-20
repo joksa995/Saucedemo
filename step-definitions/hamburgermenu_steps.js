@@ -4,7 +4,6 @@
 // const usersData = require('../config/data/usersdata');
 // const HamburgerMenuPage = require('../support/pages/hamburgermenu.page');
 
-
 // Given(/^I am on hamburger manu$/, function() {
 //     browser.url('/');
 //     LoginPage.login(usersData.username, usersData.password);

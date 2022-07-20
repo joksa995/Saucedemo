@@ -15,13 +15,9 @@ class LoginPage extends Page {
     }
 
     login(username, password) {
-        this.inputUsername.setValue(username);
-        this.inputPassword.setValue(password);
-        this.btnSubmit.click();
-    }
-
-    open() {
-        return super.open('login');
+        this.setValue(this.inputUsername, username);
+        this.setValue(this.inputPassword, password)
+        this.click(this.btnSubmit);
     }
 }
 

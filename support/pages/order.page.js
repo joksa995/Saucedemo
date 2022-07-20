@@ -40,14 +40,12 @@ class OrderPage extends Page {
         this.btnFinish.click();
     }
     inputDataOfCastumer(firstname, lastname, zipcode) {
-        this.inputFirstName.setValue(firstname);
-        this.inputLastName.setValue(lastname);
-        this.inputZipCode.setValue(zipcode);
+        this.setValue(this.inputFirstName, firstname);
+        this.setValue(this.inputLastName, lastname);
+        this.setValue(this.inputZipCode, zipcode);
     }
-
     checkIfOrderConfirmed() {
         assert.strictEqual(this.btnBackHome.isDisplayed(), true);
     }
-
 }
 module.exports = new OrderPage();

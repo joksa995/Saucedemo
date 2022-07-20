@@ -1,4 +1,4 @@
-Feature: I am on saucedemo.com
+Feature: Testing if i am loged on
 
   Scenario: Testing login page
 

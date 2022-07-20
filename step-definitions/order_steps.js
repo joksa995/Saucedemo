@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const { firstname, lastname, zipcode } = require('../config/data/usersdata');
+//const { firstname, lastname, zipcode } = require('../config/data/usersdata');
 const HomePage = require('../support/pages/home.page');
 const LoginPage = require('../support/pages/login.page');
 const OrderPage = require('../support/pages/order.page');
