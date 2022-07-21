@@ -6,18 +6,23 @@ class HomePage extends Page {
     get btnHamburger() {
         return $('#react-burger-menu-btn');
     }
+
     get btnAllItems() {
         return $('#inventory_sidebar_link');
     }
+
     get btnAbout() {
         return $('#about_sidebar_link');
     }
+
     get btnLogout() {
         return $('#logout_sidebar_link');
     }
+
     get btnResetAppState() {
         return $('#reset_sidebar_link');
     }
+
     get SauceLabTextDispayed() {
         return $('.title.is-1');
     }
@@ -39,6 +44,9 @@ class HomePage extends Page {
     }
 
     clickOnAboutButton() {
+        if (!this.btnAbout.isDisplayed()) {
+            this.click(this.btnHamburger);
+        }
         this.click(this.btnAbout);
     }
 
@@ -51,8 +59,7 @@ class HomePage extends Page {
         assert.strictEqual(this.btnAbout.isDisplayed(), true);
         assert.strictEqual(this.btnLogout.isDisplayed(), true);
         assert.strictEqual(this.btnResetAppState.isDisplayed(), true);
-
-
     }
+
 }
 module.exports = new HomePage();

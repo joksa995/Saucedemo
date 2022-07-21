@@ -7,10 +7,11 @@ Given(/^I am loged in on home page$/, function() {
     browser.url('/');
     LoginPage.login(usersData.username, usersData.password);
 });
+
 When(/^I click on hamburger button on the top left side$/, function() {
     HomePage.clickOnHamburgerButton();
     HomePage.clickOnAboutButton();
     HomePage.checkIfTextIsDisplayed();
-    // HomePage.checkIfHamburgerMenuIsDispayed();
 });
+
 Then(/^I shoud see list of comands$/, function() {});
