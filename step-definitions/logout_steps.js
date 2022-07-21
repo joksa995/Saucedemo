@@ -8,13 +8,15 @@ Given(/^I am loged in saucedemo.com page with products$/, function() {
     browser.url('/');
     LoginPage.login(usersData.username, usersData.password);
 });
+
 When(/^I click on hamburger button$/, function() {
     HomePage.clickOnHamburgerButton();
 });
+
 When(/^I click on Logout button$/, function() {
-    browser.pause(30000);
     LogoutPage.clickOnLogoutButton();
 });
+
 Then(/^I should be back on Log in page$/, function() {
     LogoutPage.checkIfLoginButtonIsDisplayed();
 });
