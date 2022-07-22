@@ -18,4 +18,23 @@ $ git clone git@github.com:joksa995/Saucedemo.git
 
 # To run test:
 -npm run test
+"name": "webdriverio-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@wdio/cli": "^7.20.3",
+        "@wdio/cucumber-framework": "^7.20.3",
+        "@wdio/local-runner": "^7.20.3",
+        "@wdio/spec-reporter": "^7.20.3",
+        "chromedriver": "^102.0.0",
+        "wdio-chromedriver-service": "^7.3.2"
+    },
+    "scripts": {
+        "test": "wdio run wdio.conf.js"
+    },
+    "dependencies": {
+        "@wdio/sync": "^7.20.3"
+    }
+}
+
 
