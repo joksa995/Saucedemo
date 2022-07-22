@@ -3,7 +3,7 @@
 Project is about automatic testing saucedemo.com 
 
 # Clone the repository.
- git clone git@github.com:joksa995/Saucedemo.git
+$ git clone git@github.com:joksa995/Saucedemo.git
 
 # Version of programs that needs to start the tests:
 -node v14.18.2
