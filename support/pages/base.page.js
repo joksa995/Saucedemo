@@ -9,4 +9,9 @@ module.exports = class Page {
         element.waitForDisplayed({ timeout: 30000 })
         element.setValue(value)
     }
+
+    get(element, value) {
+        element.waitForDisplayed({ timeout: 30000 })
+        element.get(value)
+    }
 }

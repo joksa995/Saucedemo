@@ -1,13 +1,13 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const HomePage = require('../support/pages/home.page');
 const LoginPage = require('../support/pages/login.page');
 const usersData = require('../config/data/usersdata');
 const CartPage = require('../support/pages/cart.page');
 const OrderPage = require('../support/pages/order.page');
+require("dotenv").config();
 
 Given(/^I am on home page on saucedemo, logged in as standard user$/, function() {
     browser.url('/');
-    LoginPage.login(usersData.username, usersData.password);
+    LoginPage.login(process.env.USERNAME, process.env.PASSWORD);
 });
 
 When(/^I click on ADD TO CART button$/, function() {
@@ -22,6 +22,6 @@ When(/^I click on remove button on right side$/, function() {
     CartPage.clickOnRemoveFromCartButton();
 });
 
-Then(/^I should see empty cart$/, () => {
+Then(/^I should see empty cart$/, function() {
     CartPage.checkIfCartIsEmpty();
 });
